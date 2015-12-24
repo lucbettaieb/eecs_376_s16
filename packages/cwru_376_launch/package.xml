@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <name>cwru_376_launch</name>
+  <version>0.0.1</version>
+  <description>The cwru_376_launch package</description>
+
+  <maintainer email="bettaieb@case.edu">Luc Bettaieb</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
