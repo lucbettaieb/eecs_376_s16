@@ -55,7 +55,7 @@
 <run_depend>geometry_msgs/Twist</run_depend>
 <run_depend>nav_msgs/Odometry</run_depend>
 <run_depend>interactive_markers</run_depend>
-<run_depend>visualization</run_depend>
+<run_depend>visualization_markers</run_depend>
 <run_depend>tf</run_depend>
 <run_depend>std_msgs</run_depend>
 <run_depend>geometry_msgs</run_depend>
