@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(example_des_state_generator)
 
-find_package(catkin_simple REQUIRED)
+find_package(catkin_simple REQUIRED cmake_modules)
+
+
+
 
 catkin_simple()
 

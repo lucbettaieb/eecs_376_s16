@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(example_steering_algorithm)
 
-find_package(catkin_simple REQUIRED)
+find_package(catkin_simple REQUIRED cmake_modules)
 
 catkin_simple()
 

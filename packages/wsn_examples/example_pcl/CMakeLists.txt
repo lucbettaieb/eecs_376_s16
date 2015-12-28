@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(example_pcl)
 
-find_package(catkin_simple REQUIRED)
+find_package(catkin_simple REQUIRED cmake_modules)
+catkin_simple()
+
 
 find_package(PCL 1.7 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
@@ -10,7 +12,7 @@ find_package(Eigen REQUIRED)
 
 include_directories(${Eigen_INCLUDE_DIRS})
 add_definitions(${EIGEN_DEFINITIONS})
-catkin_simple()
+
 
 # example boost usage
 # find_package(Boost REQUIRED COMPONENTS system thread)

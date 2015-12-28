@@ -1,0 +1,59 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(example_des_state_generator)
+
+find_package(cmake_modules REQUIRED)
+find_package(Eigen REQUIRED)
+
+find_package(catkin 
+  REQUIRED cmake_modules
+  
+  COMPONENTS
+  roscpp
+  cmake_modules
+  geometry_msgs
+  nav_msgs
+  std_msgs
+  cwru_srv
+  cwru_msgs
+)
+
+link_directories(${PCL_LIBRARY_DIRS})
+
+catkin_package(
+  CATKIN_DEPENDS roscpp std_msgs geometry_msgs nav_msgs cwru_srv cwru_msgs
+  DEPENDS Eigen 
+)
+
+include_directories(include)
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+  ${PROJECT_NAME}/include
+  ${Eigen_INCLUDE_DIRS}
+)
+
+add_definitions(${EIGEN_DEFINITIONS})
+
+#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+
+## Declare a C++ executable
+
+cs_add_executable(des_state_generator src/example_des_state_generator.cpp)
+
+target_link_libraries(des_state_generator
+  ${catkin_LIBRARIES}
+  ${Eigen_LIBRARIES}
+)
+
+cs_add_executable(example_path_sender src/example_path_sender.cpp)
+
+target_link_libraries(example_path_sender
+  ${catkin_LIBRARIES}
+  ${Eigen_LIBRARIES}
+)
+
+cs_add_executable(example_path_sender_starting_pen src/example_path_sender_starting_pen.cpp)
+
+target_link_libraries(example_path_sender_starting_pen
+  ${catkin_LIBRARIES}
+  ${Eigen_LIBRARIES}
+)

@@ -1,14 +1,16 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(example_robot_interface)
 
-find_package(catkin_simple REQUIRED)
+find_package(catkin_simple REQUIRED cmake_modules)
+catkin_simple()
+
 find_package(Eigen REQUIRED)
 find_package(irb120_ik REQUIRED)
 find_package(example_joint_space_planner REQUIRED)
 include_directories(${Eigen_INCLUDE_DIRS})
 add_definitions(${EIGEN_DEFINITIONS})
 
-catkin_simple()
+
 
 # example boost usage
 # find_package(Boost REQUIRED COMPONENTS system thread)

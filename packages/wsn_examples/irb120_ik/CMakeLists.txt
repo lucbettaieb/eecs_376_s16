@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(irb120_ik)
 
 
-find_package(catkin_simple REQUIRED)
+find_package(catkin_simple REQUIRED cmake_modules)
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
